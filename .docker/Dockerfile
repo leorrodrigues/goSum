@@ -8,6 +8,6 @@ RUN GOOS=linux GOARCH=amd64 go build -ldflags="-w -s" -o /go/bin/app
 #Create the final container
 FROM scratch
 
-COPY --from=builder /go/bin/app/sum /go/bin/app
+COPY --from=builder /go/bin/app /go/bin/app
 
 ENTRYPOINT [ "/go/bin/app" ]
