@@ -1,0 +1,9 @@
+version: '3'
+services:
+  #PHP LARAVEL
+  app:
+    build:
+      context: .
+      dockerfile: .docker/Dockerfile
+    container_name: app
+    tty: true
